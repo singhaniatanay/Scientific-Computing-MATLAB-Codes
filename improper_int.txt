@@ -1,0 +1,17 @@
+function I = improper_int()
+    P = 3;
+    B = 10000;
+    xi = 1;
+    dx= 0.0001;
+    I = 0;
+    while(xi < B)
+        fxi = myfunc(xi,P);
+        I = I + fxi * dx;
+        xi = xi + dx;
+    end
+    function out = myfunc(in,p)
+        out = (1/in^p);
+    end
+end
+
+
